@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="https://kit.fontawesome.com/e6e69e90ca.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main>
+    <section class="projectpage">
+      <div class="projectpage__image kenburns-top" style="background-image: url(img/project-1.jpg);" id="animate-image">
+      </div>
+      <div class="projectpage__content" id="animate-content">
+        <a href="#!" onclick="showAnimation('projects.html#project1')">
+          <i class="far fa-times-circle fa-5x"></i>
+        </a>
+        <div class="projectpage__content-inner">
+          <div class="image" style="background-image: url(img/project-2.jpg);"></div>
+          <div class="info">
+            <div class="title">Mindfulness & Yoga Healing</div>
+            <div class="text">Wind down your daily revs and reach that state of gentle consciousness you only get
+              through meditation and yoga practice. </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    function showAnimation(url) {
+      document.getElementById("animate-content").animate(
+        [{ transform: 'translateX(100%)' }], { duration: 800 }
+      )
+      let animated = document.getElementById("animate-image");
+      animated.classList.remove("kenburns-top")
+      animated.classList.add("kenburns-top-reverse")
+      animated.addEventListener('animationend', () => {
+        window.location.href = url;
+      });
+    }
+  </script>
+</body>
+
+</html>
