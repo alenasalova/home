@@ -186,6 +186,11 @@
           transition-delay: 0.55s;
 }
 
+.menu-nav__item:nth-child(5) {
+  -webkit-transition-delay: 0.65s;
+          transition-delay: 0.65s;
+}
+
 .about {
   padding-bottom: 2rem;
   display: -webkit-box;
@@ -201,26 +206,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*.jobs {
-    width: 60vw;
-    margin: 2rem auto 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  
-    &__job {
-      background: lighten($primary-color, 10%);
-      padding: 0.5rem;
-      border-bottom: 5px solid $secondary-color;
-  
-      h2, h3 {
-        margin: 0.5rem 0;
-      }
-      h6 {
-        margin: 0.3rem 0;
-      }
-    }
-  }*/
 }
 
 .about__bio-image {
@@ -245,21 +230,13 @@
           justify-content: flex-end;
 }
 
-.about__bio-image p {
+.about__bio-image .text-secondary {
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
-.about__bio {
-  width: 80%;
-  text-align: center;
-}
-
-.about__bio .text-secondary {
-  padding-bottom: 1rem;
-}
-
 .about__bio-text {
-  width: 80%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,11 +247,26 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   padding-top: 1rem;
-  text-align: center;
+}
+
+.about__bio-text p {
+  text-align: start;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.about__bio-text .action-call {
+  text-align: start;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.about__bio-text .action-call a:hover {
+  text-decoration: underline;
 }
 
 .about .social-icons {
@@ -421,9 +413,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding-left: 2rem;
   background: -webkit-gradient(linear, left top, right top, from(#272727), to(rgba(39, 39, 39, 0.1))), url("../img/model-1.jpg");
   background: linear-gradient(to right, #272727, rgba(39, 39, 39, 0.1)), url("../img/model-1.jpg");
   background-position: top center;
@@ -431,7 +424,7 @@
 }
 
 .contact h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 
@@ -442,6 +435,15 @@
       grid-template-columns: 1fr;
   grid-gap: 2rem;
   font-size: 1.5rem;
+}
+
+.contact__item a {
+  color: orange;
+  word-break: break-all;
+}
+
+.contact__item a:hover {
+  text-decoration: underline;
 }
 
 .contact .social-icons {
@@ -455,7 +457,8 @@
   position: fixed;
   right: auto;
   text-align: right;
-  padding: 1rem;
+  padding-left: 0;
+  padding-top: 1rem;
   color: #fff;
 }
 
@@ -734,17 +737,9 @@
           justify-content: flex-end;
 }
 
-.portfolio__bio-image p {
+.portfolio__bio-image .text-secondary {
+  font-size: 2rem;
   margin-bottom: 2rem;
-}
-
-.portfolio__bio {
-  width: 80%;
-  text-align: center;
-}
-
-.portfolio__bio .text-secondary {
-  padding-bottom: 1rem;
 }
 
 .portfolio__bio-text {
@@ -872,6 +867,7 @@
 }
 
 .myservice__themes {
+  width: 60vw;
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: -webkit-box;
@@ -884,9 +880,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 .myservice__themes ul {
@@ -897,6 +893,8 @@
 .myservice__themes ul li {
   padding-top: 0.5rem;
   font-size: 1.5rem;
+  line-height: 2rem;
+  margin-left: 1rem;
 }
 
 .myservice__items {
@@ -988,14 +986,55 @@
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  border: 1px solid #fff;
   font-family: 'Philosopher', sans-serif;
   font-size: 1.5rem;
-  border: 1px solid #fff;
+  -webkit-animation-name: translate-title;
+          animation-name: translate-title;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .myservice .text-secondary {
   font-size: 2rem;
-  text-align: center;
+}
+
+.myservice .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.myservice footer {
+  -webkit-transform: rotate(90deg) translate(-3rem, -4rem);
+          transform: rotate(90deg) translate(-3rem, -4rem);
+  padding-left: 2.5rem;
+}
+
+@-webkit-keyframes translate-title {
+  from {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes translate-title {
+  from {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1026,20 +1065,14 @@
     background-position: top center;
     background-size: cover;
   }
-  .about__bio {
-    font-size: 1.5rem;
-  }
-  .about__bio-text {
-    font-size: 1.5rem;
-  }
   .about__bio-image {
     background: -webkit-gradient(linear, left top, right top, from(#272727), to(rgba(39, 39, 39, 0.1))), url("../img/model-2.jpg");
     background: linear-gradient(to right, #272727, rgba(39, 39, 39, 0.1)), url("../img/model-2.jpg");
     background-position: top center;
     background-size: cover;
   }
-  .portfolio__bio {
-    font-size: 1.5rem;
+  .about__bio-image .text-secondary {
+    font-size: 3rem;
   }
   .portfolio__bio-text {
     font-size: 1.5rem;
@@ -1049,6 +1082,9 @@
     background: linear-gradient(to right, #272727, rgba(39, 39, 39, 0.1)), url("../img/model-2.jpg");
     background-position: top center;
     background-size: cover;
+  }
+  .portfolio__bio-image .text-secondary {
+    font-size: 3rem;
   }
   .projects__bio-image {
     height: 50vh;
@@ -1079,8 +1115,16 @@
     background: linear-gradient(to right, #272727, rgba(39, 39, 39, 0.1)), url("../img/model-2.jpg");
     background-position: top center;
     background-size: cover;
+    padding-top: 50vh;
+  }
+  .contact h2 {
+    font-size: 2rem;
+  }
+  .contact__item .text-secondary {
+    padding-top: 1rem;
   }
   .contact__list {
+    padding-top: 2rem;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
