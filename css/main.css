@@ -236,7 +236,7 @@
 }
 
 .about__bio-text {
-  width: 65%;
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,7 +261,25 @@
   line-height: 1.5;
 }
 
-.about .social-icons {
+.about__bio-text span {
+  font-weight: 700;
+  color: orange;
+}
+
+.about__bio-text ul {
+  padding: 0.5rem 1rem;
+}
+
+.about__bio-text ul li {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.about__bio-text i {
+  padding: 1rem;
+}
+
+.about__bio-text .text-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,11 +287,94 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__bio-text .text-wrapper-inner {
+  padding: 1rem;
+}
+
+.about .jobs {
+  width: 85%;
+  margin: 2rem auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.about .jobs__job {
+  width: 100%;
+  background: #414141;
+  padding: 1rem;
+  border-bottom: 5px solid orange;
+}
+
+.about .jobs__job h2 {
+  margin: 0.5rem 0;
+}
+
+.about .jobs__job h6 {
+  margin: 0.3rem 0;
+}
+
+.about .jobs__job h3 {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: orange;
+  padding: 1rem 0 1rem 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.about .jobs__job p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.about .jobs__job-title {
+  font-weight: 600;
+}
+
+.about .jobs .text-secondary {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.about .social-icons {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  padding: 1rem;
 }
 
 .about footer {
-  -webkit-transform: rotate(90deg) translate(-3rem, -4rem);
-          transform: rotate(90deg) translate(-3rem, -4rem);
+  position: relative;
+  bottom: auto;
+  right: auto;
+}
+
+.about .footer-wrapper {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .projects {
@@ -426,7 +527,7 @@
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-gap: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .contact__item a {
@@ -735,7 +836,7 @@
 }
 
 .portfolio__bio-text {
-  width: 60%;
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -753,56 +854,13 @@
   text-align: center;
 }
 
-.portfolio .jobs {
-  width: 60vw;
-  margin: 2rem auto 0 auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  grid-gap: 2rem;
-}
-
-.portfolio .jobs__job {
-  width: 60vw;
-  background: #414141;
-  padding: 1rem;
-  border-bottom: 5px solid orange;
-}
-
-.portfolio .jobs__job h2 {
-  margin: 0.5rem 0;
-}
-
-.portfolio .jobs__job h6 {
-  margin: 0.3rem 0;
-}
-
-.portfolio .jobs__job h3 {
-  font-size: 1.2rem;
-  line-height: 2rem;
-  font-weight: 600;
-  color: orange;
-  padding: 1rem 0 1rem 0;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.portfolio .jobs__job p {
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-}
-
-.portfolio .jobs__job-title {
-  font-weight: 600;
-}
-
 .portfolio .text-secondary {
   font-size: 2rem;
   text-align: start;
 }
 
 .portfolio .cards {
-  width: 60vw;
+  width: 85%;
   margin: 2rem auto 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -822,7 +880,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   background: #414141;
 }
 
@@ -890,19 +948,43 @@
   color: #fff;
 }
 
+.portfolio .cards__item .card-button:hover {
+  color: orange;
+}
+
+.portfolio .cards .text-secondary {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
 .portfolio .social-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  position: relative;
+  bottom: auto;
+  left: auto;
+  padding: 1rem;
 }
 
 .portfolio footer {
-  -webkit-transform: rotate(90deg) translate(-3rem, -4rem);
-          transform: rotate(90deg) translate(-3rem, -4rem);
+  position: relative;
+  bottom: auto;
+  right: auto;
+}
+
+.portfolio .footer-wrapper {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .myservice {
@@ -950,7 +1032,7 @@
 }
 
 .myservice__bio-text {
-  width: 60%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -958,18 +1040,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  padding-top: 3rem;
-  text-align: center;
+  padding-top: 2rem;
+  text-align: start;
 }
 
 .myservice__content {
-  width: 80%;
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -986,7 +1068,7 @@
 }
 
 .myservice__themes {
-  width: 60vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1035,7 +1117,7 @@
 }
 
 .myservice__items {
-  width: 60vw;
+  width: 100%;
   margin: 2rem auto 0 auto;
   display: -ms-grid;
   display: grid;
@@ -1127,52 +1209,45 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5rem;
   line-height: 1.8rem;
-  -webkit-animation-name: translate-title;
-          animation-name: translate-title;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+}
+
+.myservice__item-title:hover {
+  color: orange;
 }
 
 .myservice .text-secondary {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
 }
 
 .myservice .social-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  position: relative;
+  bottom: auto;
+  left: auto;
+  padding: 1rem;
 }
 
 .myservice footer {
-  -webkit-transform: rotate(90deg) translate(-3rem, -4rem);
-          transform: rotate(90deg) translate(-3rem, -4rem);
-  padding-left: 2.5rem;
+  position: relative;
+  bottom: auto;
+  right: auto;
 }
 
-@-webkit-keyframes translate-title {
-  from {
-    -webkit-transform: translateY(70%);
-            transform: translateY(70%);
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes translate-title {
-  from {
-    -webkit-transform: translateY(70%);
-            transform: translateY(70%);
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
+.myservice .footer-wrapper {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1195,7 +1270,7 @@
     padding-right: 1.5rem;
   }
   .nav .menu-nav__link {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .home {
     background: -webkit-gradient(linear, left top, right top, from(#272727), to(rgba(39, 39, 39, 0.1))), url("../img/model-2.jpg");
@@ -1215,6 +1290,28 @@
   .about__bio-image .text-secondary {
     font-size: 3rem;
   }
+  .about__bio-text .text-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .about .jobs__job h3 {
+    font-size: 1.5rem;
+  }
+  .about .jobs .text-secondary {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
   .portfolio__bio-text {
     font-size: 1.5rem;
   }
@@ -1226,9 +1323,6 @@
   }
   .portfolio__bio-image .text-secondary {
     font-size: 3rem;
-  }
-  .portfolio .jobs__job h3 {
-    font-size: 1.5rem;
   }
   .portfolio .cards__item {
     display: -webkit-box;
@@ -1269,7 +1363,8 @@
     background-size: cover;
   }
   .myservice .text-secondary {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
   }
   .myservice__themes ul li {
     font-size: 1.3rem;
@@ -1393,7 +1488,7 @@ main .social-icons a:hover {
   color: orange;
 }
 
-footer {
+main footer {
   font-size: 0.8rem;
   position: fixed;
   bottom: 0.4rem;
